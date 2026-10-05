@@ -4,6 +4,9 @@
 The current release supports installation and CPU checks on Windows x86_64 / Python 3.12.
 Full-resolution accelerator forecasts have not yet been validated.
 
+Download weights, the binary runtime and validation report from the
+[v0.1.0-rc.1 release](https://github.com/hourzp/DaYu-TC/releases/tag/v0.1.0-rc.1).
+
 This repository provides public inference entry-point code, architecture pseudocode,
 and instructions for tensor-only weights and binary model runtimes. The neural model
 implementation is distributed as compiled extensions, not open Python model source.
@@ -35,6 +38,12 @@ It must not be installed on Linux or under a different Python ABI.
 
 Download all numbered asset parts and `download_index.json` from the same release,
 then reconstruct the assets with `python assemble_assets.py --downloads downloads --output assets`.
+With GitHub CLI, download the complete asset set using:
+
+```bash
+gh release download v0.1.0-rc.1 --repo hourzp/DaYu-TC --dir downloads
+python assemble_assets.py --downloads downloads --output assets
+```
 Each attachment is at most 1 GiB; [GitHub limits each release asset to under 2 GiB](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
 The assembly tool checks part hashes; `infer.py verify` checks reconstructed files.
 
