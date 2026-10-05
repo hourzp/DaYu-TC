@@ -4,11 +4,12 @@
 The current release supports installation and CPU checks on Windows x86_64 / Python 3.12.
 Full-resolution accelerator forecasts have not yet been validated.
 
-Download weights, the binary runtime and validation report from the
+Download the binary runtime, inference support data and validation report from the
 [v0.1.0-rc.1 release](https://github.com/hourzp/DaYu-TC/releases/tag/v0.1.0-rc.1).
+**Weights are hosted separately. Their download location is pending; see [WEIGHTS.md](WEIGHTS.md).**
 
 This repository provides public inference entry-point code, architecture pseudocode,
-and instructions for tensor-only weights and binary model runtimes. The neural model
+and instructions for external tensor-only weights and binary model runtimes. The neural model
 implementation is distributed as compiled extensions, not open Python model source.
 Training code and the original training pipeline are not provided.
 
@@ -23,10 +24,9 @@ Install the runtime wheel built for the same OS, CPU architecture and Python ABI
 python -m pip install ./dayu_tc_runtime-<version>-<matching-platform>.whl
 python infer.py doctor
 python smoke_test.py
-python infer.py verify --assets ./assets
 ```
 
-The native wheel, weight parts and validation report are distributed with the tagged
+The native wheel, support data and validation report are distributed with the tagged
 prerelease. Installation of PyTorch is environment-specific; install
 it first using the supported NVIDIA/PyTorch combination. The runtime wheel must not
 replace a vendor accelerator build with an unrelated PyTorch installation.
@@ -36,16 +36,18 @@ The available Windows wheel is named
 and an empty package initializer, with no Python implementation or bytecode files.
 It must not be installed on Linux or under a different Python ABI.
 
-Download all numbered asset parts and `download_index.json` from the same release,
-then reconstruct the assets with `python assemble_assets.py --downloads downloads --output assets`.
-With GitHub CLI, download the complete asset set using:
+With GitHub CLI, download the runtime and support files using:
 
 ```bash
 gh release download v0.1.0-rc.1 --repo hourzp/DaYu-TC --dir downloads
-python assemble_assets.py --downloads downloads --output assets
+python -m zipfile -e downloads/inference_support.zip .
 ```
-Each attachment is at most 1 GiB; [GitHub limits each release asset to under 2 GiB](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
-The assembly tool checks part hashes; `infer.py verify` checks reconstructed files.
+Then place the three externally obtained `.pt` files into `assets/`, following
+[WEIGHTS.md](WEIGHTS.md), and run `python infer.py verify --assets assets`.
+Until the external download link is supplied, users can run the small random-model
+installation check but cannot run pretrained inference from this repository alone.
+`assemble_assets.py` is an optional utility for externally distributed multipart
+assets; the current GitHub release does not contain weight parts.
 
 ## Inputs and outputs
 
@@ -93,23 +95,25 @@ native-grid multi-step acceptance test is required before reproducing long-lead 
 
 ## Release assets
 
-`assets/` contains `global_extreme`, `global_normal`, and `region` model `.pt` tensor
-state dictionaries, inference-only `.json` configurations, `_static.npy`, `_stats.npz`,
-and `manifest.json` SHA-256 checksums. Use `global_extreme` for the documented nested
+`inference_support.zip` supplies inference-only `.json` configurations, `_static.npy`,
+`_stats.npz`, and `manifest.json` SHA-256 checksums under `assets/`.
+`global_extreme.pt`, `global_normal.pt`, and `region.pt` tensor state dictionaries
+are distributed externally, with their download location pending.
+Use `global_extreme` for the documented nested
 pipeline; `global_normal` preserves the supplied filename but its checkpoint also
 selects the `extreme` inference mode. Do not interpret that filename as proof of a
 disabled-adapter baseline; the checkpoint configuration is authoritative.
-Large binary assets belong in versioned downloadable assets, not ordinary Git commits.
-Model availability and inference reproducibility require both the runtime and assets.
+Model availability and inference reproducibility require the runtime, support data
+and external weights. Weight filenames and checksums are in `weights_manifest.json`
+in the release assets.
 
 ## Availability scope
 
-“The pretrained model weights, inference entry-point code, architecture pseudocode,
-and a Windows/Python 3.12 binary inference runtime for DaYu-TC are provided in this
-repository and its versioned release assets. The neural network implementation is provided
-in compiled form. Training code and the original training pipeline are not included;
-this release supports inference with the pretrained models rather than reproduction
-of the original training procedure.”
+This repository publishes inference entry-point code, architecture pseudocode,
+support data and a Windows/Python 3.12 binary runtime. The neural network implementation
+is provided in compiled form. Training code and the original training pipeline are
+not included. The external weight download location has not yet been published.
+Do not claim that pretrained weights are publicly available until that link is live.
 
 Do not substitute “fully open-source model code” for this statement. A pseudocode
 description plus a binary runtime is not publication of the model implementation source.
