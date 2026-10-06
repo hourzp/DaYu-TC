@@ -44,6 +44,9 @@ python -m zipfile -e downloads/inference_support.zip .
 ```
 Then place the three externally obtained `.pt` files into `assets/`, following
 [WEIGHTS.md](WEIGHTS.md), and run `python infer.py verify --assets assets`.
+The repository includes `download_weights.py` and `weights_manifest.json`; once the
+real external URLs are configured, `python download_weights.py --output assets`
+downloads and verifies the weights automatically.
 Until the external download link is supplied, users can run the small random-model
 installation check but cannot run pretrained inference from this repository alone.
 `assemble_assets.py` is an optional utility for externally distributed multipart

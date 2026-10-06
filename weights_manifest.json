@@ -1,0 +1,25 @@
+{
+  "download_url": null,
+  "status": "External download location not yet provided",
+  "files": [
+    {
+      "name": "global_extreme.pt",
+      "size": 2884196469,
+      "sha256": "673218f3112bf0f331d6aac0f90fe4342758718e781f3d7ac2d781c4228f9e46",
+      "url": null
+    },
+    {
+      "name": "global_normal.pt",
+      "size": 2884196469,
+      "sha256": "885354c94bc7e705f16e0d06fb35ce53db27b34f31bc4e7a703a105b6251724a",
+      "url": null
+    },
+    {
+      "name": "region.pt",
+      "size": 2884917365,
+      "sha256": "2b7576772a8dbc06a7b8c25f068a87b9d7526098f9f1d2faa2a469e63da3c483",
+      "url": null
+    }
+  ],
+  "compatible_release": "v0.1.0-rc.1"
+}

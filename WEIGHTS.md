@@ -22,3 +22,28 @@ When the external weights become available:
 
 The complete pretrained inference bundle requires roughly 8.7 GB of local storage.
 The CPU random-model smoke test can run without these weights and is not a forecast-quality test.
+
+## Linked downloads
+
+`weights_manifest.json` in this repository fixes the weight filenames, byte sizes,
+SHA-256 values and compatible inference release. Its URLs are deliberately empty
+until real external hosting is published.
+
+After the maintainer fills in the per-file URLs, users can run:
+
+```bash
+python download_weights.py --output assets
+python infer.py verify --assets assets
+```
+
+Alternatively, `--base-url` accepts an HTTPS directory containing the exact three
+filenames. For Hugging Face, pin a full commit revision in the resolve URL; for
+Zenodo, use the file URLs of a specific published record. Do not silently replace
+weights under an existing version. The downloader resumes partial files when the
+server supports HTTP Range, verifies SHA-256 before committing a file, and refuses
+to overwrite a conflicting existing weight.
+
+Recommended research release layout: GitHub for inference software; a separately
+published Zenodo record for pretrained weights and a citable DOI. A Hugging Face
+model repository can provide a download mirror with a fixed revision. Hosting and
+DOI registration have not been performed by this repository.
