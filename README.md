@@ -6,7 +6,7 @@ Full-resolution accelerator forecasts have not yet been validated.
 
 Download the binary runtime, inference support data and validation report from the
 [v0.1.0-rc.1 release](https://github.com/hourzp/DaYu-TC/releases/tag/v0.1.0-rc.1).
-**Weights are hosted separately. Their download location is pending; see [WEIGHTS.md](WEIGHTS.md).**
+**Published weights:** [10.5281/zenodo.23181947](https://zenodo.org/records/23181947); see [WEIGHTS.md](WEIGHTS.md).
 
 This repository provides public inference entry-point code, architecture pseudocode,
 and instructions for external tensor-only weights and binary model runtimes. The neural model
@@ -44,11 +44,10 @@ python -m zipfile -e downloads/inference_support.zip .
 ```
 Then place the three externally obtained `.pt` files into `assets/`, following
 [WEIGHTS.md](WEIGHTS.md), and run `python infer.py verify --assets assets`.
-The repository includes `download_weights.py` and `weights_manifest.json`; once the
-real external URLs are configured, `python download_weights.py --output assets`
+The repository includes `download_weights.py` and `weights_manifest.json`; with the
+configured Zenodo file URLs, `python download_weights.py --output assets`
 downloads and verifies the weights automatically.
-Until the external download link is supplied, users can run the small random-model
-installation check but cannot run pretrained inference from this repository alone.
+The published external weights complete the pretrained inference assets. Full-resolution accelerator qualification remains pending.
 `assemble_assets.py` is an optional utility for externally distributed multipart
 assets; the current GitHub release does not contain weight parts.
 
@@ -101,7 +100,7 @@ native-grid multi-step acceptance test is required before reproducing long-lead 
 `inference_support.zip` supplies inference-only `.json` configurations, `_static.npy`,
 `_stats.npz`, and `manifest.json` SHA-256 checksums under `assets/`.
 `global_extreme.pt`, `global_normal.pt`, and `region.pt` tensor state dictionaries
-are distributed externally, with their download location pending.
+are published externally on Zenodo at the DOI linked above.
 Use `global_extreme` for the documented nested
 pipeline; `global_normal` preserves the supplied filename but its checkpoint also
 selects the `extreme` inference mode. Do not interpret that filename as proof of a
@@ -115,15 +114,14 @@ in the release assets.
 This repository publishes inference entry-point code, architecture pseudocode,
 support data and a Windows/Python 3.12 binary runtime. The neural network implementation
 is provided in compiled form. Training code and the original training pipeline are
-not included. The external weight download location has not yet been published.
-Do not claim that pretrained weights are publicly available until that link is live.
+not included. The pretrained weights are published with DOI 10.5281/zenodo.23181947. This release supports inference, not reproduction of the original training procedure.
 
 Do not substitute “fully open-source model code” for this statement. A pseudocode
 description plus a binary runtime is not publication of the model implementation source.
 
 ## License and citation
 
-An explicit redistribution or open-source license has not yet been assigned to the
-code, binary runtime or weights. This repository does not claim an open-source license.
-Author and paper citation metadata will be added when available. No observational
-input dataset is included. Contact the repository maintainer about licensing.
+The published Zenodo weight record uses [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/): attribution is required and commercial use requires separate authorization.
+An explicit license has not yet been assigned to the GitHub code or compiled runtime.
+See CITATION.cff for weight authors and DOI. Paper citation metadata will be added when available.
+No observational input dataset is included. Contact the repository maintainer about software licensing.

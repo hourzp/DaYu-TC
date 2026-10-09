@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import re
 import urllib.parse
 import urllib.request
 
@@ -15,9 +16,10 @@ def checksum(path):
     return digest.hexdigest()
 
 
-def download(entry, destination, base_url=None):
+def download(entry, destination, base_url=None, *, _part=False):
     name, size, expected = entry['name'], entry['size'], entry['sha256']
-    if name not in ('global_extreme.pt', 'global_normal.pt', 'region.pt'):
+    if name not in ('global_extreme.pt', 'global_normal.pt', 'region.pt') and not (
+            _part and re.fullmatch(r'(global_extreme|global_normal|region)\.pt\.part[0-9]{4}', name)):
         raise ValueError('Unknown weight filename')
     if not isinstance(size, int) or size <= 0 or len(expected) != 64:
         raise ValueError('Invalid weight metadata')
@@ -77,6 +79,42 @@ def download(entry, destination, base_url=None):
     print('Downloaded and verified:', name)
 
 
+def download_weight(entry, destination, base_url=None):
+    if not entry.get('parts'):
+        return download(entry, destination, base_url)
+    name = entry['name']
+    if name not in ('global_extreme.pt', 'global_normal.pt', 'region.pt'):
+        raise ValueError('Unknown weight filename')
+    parts = entry['parts']
+    if not parts or sum(p['size'] for p in parts) != entry['size']:
+        raise ValueError('Multipart sizes do not match the complete weight')
+    for number, part in enumerate(parts, 1):
+        if part['name'] != f'{name}.part{number:04d}':
+            raise ValueError('Multipart filenames must be ordered and belong to the selected model')
+    destination = Path(destination)
+    destination.mkdir(parents=True, exist_ok=True)
+    final = destination / name
+    if final.exists():
+        if final.stat().st_size == entry['size'] and checksum(final) == entry['sha256']:
+            print('Verified existing:', name); return
+        raise ValueError(f'{final}: existing file does not match this release; refusing to overwrite')
+    directory = destination / '.weight_parts'
+    for part in parts:
+        download(part, directory, base_url, _part=True)
+    temporary = destination / (name + '.assembling')
+    digest = hashlib.sha256()
+    size = 0
+    with temporary.open('wb') as output:
+        for part in parts:
+            with (directory / part['name']).open('rb') as source:
+                while block := source.read(8 << 20):
+                    output.write(block); digest.update(block); size += len(block)
+    if size != entry['size'] or digest.hexdigest() != entry['sha256']:
+        raise ValueError('Assembled weight SHA-256/size mismatch; incomplete output retained for inspection')
+    temporary.rename(final)
+    print('Assembled and verified:', name)
+
+
 def main():
     parser = argparse.ArgumentParser(description='Download external DaYu-TC weights; no weights are bundled with GitHub')
     parser.add_argument('--manifest', default=str(Path(__file__).with_name('weights_manifest.json')))
@@ -90,7 +128,7 @@ def main():
         parser.error('Selected model is absent from the manifest')
     try:
         for entry in entries:
-            download(entry, args.output, args.base_url or manifest.get('download_url'))
+            download_weight(entry, args.output, args.base_url or manifest.get('download_url'))
     except (ValueError, OSError) as exc:
         parser.exit(1, f'Weight download stopped: {exc}\n')
 

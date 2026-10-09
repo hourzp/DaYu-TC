@@ -1,6 +1,6 @@
 # External pretrained weights
 
-**Download location: pending.** The maintainer will add the external hosting link here.
+**Download location:** [10.5281/zenodo.23181947](https://zenodo.org/records/23181947). Compatible inference release: v0.1.0-rc.1.
 Weights are intentionally not uploaded to the Git repository or GitHub Release.
 
 | File | Role |
@@ -13,12 +13,14 @@ These are tensor-only state dictionaries, without optimizer, scheduler, RNG stat
 or original training configuration. Expected byte sizes and SHA-256 values are
 published in the release's `weights_manifest.json`.
 
-When the external weights become available:
+To use the published weights:
 
 1. Download and extract `inference_support.zip` from the GitHub release.
-2. Download the three weight files from the external location specified above.
-3. Place them alongside the support files under `assets/`.
+2. Run `python download_weights.py --output assets` from the latest repository checkout.
+3. The downloader obtains the 128 MiB parts, resumes interrupted downloads, and verifies both parts and assembled complete weights.
 4. Run `python infer.py verify --assets assets` before pretrained inference.
+
+The record stores 66 binary weight parts plus support files. The original three `.pt` weights are reconstructed without changing their bytes. Keep at least 18 GB of free disk space for downloaded parts and assembled weights.
 
 The complete pretrained inference bundle requires roughly 8.7 GB of local storage.
 The CPU random-model smoke test can run without these weights and is not a forecast-quality test.
@@ -26,10 +28,10 @@ The CPU random-model smoke test can run without these weights and is not a forec
 ## Linked downloads
 
 `weights_manifest.json` in this repository fixes the weight filenames, byte sizes,
-SHA-256 values and compatible inference release. Its URLs are deliberately empty
-until real external hosting is published.
+SHA-256 values and compatible inference release. Its URLs are fixed
+and point to the published Zenodo record.
 
-After the maintainer fills in the per-file URLs, users can run:
+Download and verify the published weights with:
 
 ```bash
 python download_weights.py --output assets
@@ -45,5 +47,8 @@ to overwrite a conflicting existing weight.
 
 Recommended research release layout: GitHub for inference software; a separately
 published Zenodo record for pretrained weights and a citable DOI. A Hugging Face
-model repository can provide a download mirror with a fixed revision. Hosting and
-DOI registration have not been performed by this repository.
+model repository can provide a download mirror with a fixed revision. The weight record is now published with DOI 10.5281/zenodo.23181947. GitHub automatic software archival is a separate account setting.
+
+## Weight license
+
+The Zenodo weight record is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Attribution is required; commercial use requires separate authorization. This does not assign a license to the GitHub software or compiled runtime.

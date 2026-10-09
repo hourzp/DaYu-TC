@@ -1,25 +1,431 @@
 {
   "download_url": null,
-  "status": "External download location not yet provided",
+  "status": "Published and checksum-verified",
   "files": [
     {
       "name": "global_extreme.pt",
       "size": 2884196469,
       "sha256": "673218f3112bf0f331d6aac0f90fe4342758718e781f3d7ac2d781c4228f9e46",
-      "url": null
+      "url": null,
+      "parts": [
+        {
+          "name": "global_extreme.pt.part0001",
+          "size": 134217728,
+          "sha256": "1c77b73072071652eafdee5f6aae43a23a1b053aeefeed1508f728a72fffbe4d",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0001?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0002",
+          "size": 134217728,
+          "sha256": "df30a4e3e452b106c9038780c246fb6ad83f08f6061fcae7743d7036a5334e07",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0002?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0003",
+          "size": 134217728,
+          "sha256": "26d97c383b59d65e3ae07e5c6f44b4d4879ece2577cbf93e09444a8be1ae6f4b",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0003?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0004",
+          "size": 134217728,
+          "sha256": "37bed67c6074d9770e598e0083bcc9172c1e43c932187ea7ae687f99dc5fcb37",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0004?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0005",
+          "size": 134217728,
+          "sha256": "f766a8813c0bf0695444592da0dbbfe9fc2e5860138f83162ac0df97e278f24e",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0005?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0006",
+          "size": 134217728,
+          "sha256": "290eb1ee437c747cdede5c6285fab22b3caf82733bf0dd5ec8668c12ab2c9926",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0006?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0007",
+          "size": 134217728,
+          "sha256": "9cf881ddf56d60ed654804f4b3682bcc443573103e6669154ea01410bf52b30d",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0007?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0008",
+          "size": 134217728,
+          "sha256": "313fc48a81a69d117a88d9b03d8b14d01253b44b9c6564b1363bf9706949cea1",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0008?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0009",
+          "size": 134217728,
+          "sha256": "11d3d2471378d4929be89426b202e23f3a0238c8ce09d3a7c820c4f6730b0869",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0009?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0010",
+          "size": 134217728,
+          "sha256": "3b9cd7795c03c5ad114e20200ba4be415ae3b3ce76fbfb322a9e134e9670050d",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0010?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0011",
+          "size": 134217728,
+          "sha256": "5be857b20b528ba7ac24c0144a228b45523e77e0d41a4326ca21f40f4cd45814",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0011?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0012",
+          "size": 134217728,
+          "sha256": "65fda1ce30c3196a51b0398cbd0d9dc81137c2550a4c346e69537e81e90b0c9e",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0012?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0013",
+          "size": 134217728,
+          "sha256": "bded84294d9284620064df6d639d4cccedc71d5e3f25399e5531d4c38aa9c265",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0013?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0014",
+          "size": 134217728,
+          "sha256": "95747d1846d9d9da57ba5e7087dd5bcd272dd285efbc13e54af8449849c70379",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0014?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0015",
+          "size": 134217728,
+          "sha256": "901fb24197b15cc8f189f5c5089edf2b0fe8f34c62611ded19f6cb2317af8780",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0015?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0016",
+          "size": 134217728,
+          "sha256": "a28397b04578fa2d7530eece99dfea6d1ed7ca70124c845807af24aa65050f76",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0016?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0017",
+          "size": 134217728,
+          "sha256": "d5bd2f90cf744a950c241c76e6090cb345ec1e7b45d744a840cfd1d95d69c537",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0017?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0018",
+          "size": 134217728,
+          "sha256": "e22ef4c8d717aa6801ef81f12aa3a40a3f5d210e7f6f8b55d62e9de4cb8562d1",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0018?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0019",
+          "size": 134217728,
+          "sha256": "716c4d2b43798d51e54ebcbb590de2b82b10eea6447eb4899449b46694dd972a",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0019?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0020",
+          "size": 134217728,
+          "sha256": "0a0c21905ebe2dd7818c88e51047af9b46b28a3d9ee4c7347ffe8f6e2d077aec",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0020?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0021",
+          "size": 134217728,
+          "sha256": "3e8b7c84b2bdf29c82258ebf0ecee8e8b0a89001fbec19128b91a374b844ff7b",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0021?download=1"
+        },
+        {
+          "name": "global_extreme.pt.part0022",
+          "size": 65624181,
+          "sha256": "d84c7de61fb6cdf76ebeffe0133382d9b4e5a0c90114fdaaa138256b98de2367",
+          "url": "https://zenodo.org/records/23181947/files/global_extreme.pt.part0022?download=1"
+        }
+      ]
     },
     {
       "name": "global_normal.pt",
       "size": 2884196469,
       "sha256": "885354c94bc7e705f16e0d06fb35ce53db27b34f31bc4e7a703a105b6251724a",
-      "url": null
+      "url": null,
+      "parts": [
+        {
+          "name": "global_normal.pt.part0001",
+          "size": 134217728,
+          "sha256": "3e4abb3d95b88ccbbddf8dd89e4923aec765e9828f9f6241c8720c584a51de77",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0001?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0002",
+          "size": 134217728,
+          "sha256": "d857b96c88a3af24f32cdcfa8180cfe026c87c7dafd78a346de5d3392afb1df7",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0002?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0003",
+          "size": 134217728,
+          "sha256": "b868bc828481b9ebc24766ce5c60ff026e88fc1e161bc6cebd6b2e7239b93b7e",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0003?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0004",
+          "size": 134217728,
+          "sha256": "1844b592fafa303ceb42e111a190e4de853a24606e3dfcf005fe8815c53127af",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0004?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0005",
+          "size": 134217728,
+          "sha256": "b549b447ad828362576c4bb54ead513c78ff1818dbb028659538c9e9d24844c1",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0005?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0006",
+          "size": 134217728,
+          "sha256": "5b355ff8643ba5e3986be0ba63de2ca85708c87036fdee07b5f20815167a01e1",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0006?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0007",
+          "size": 134217728,
+          "sha256": "2b25c0ea0398af7b8d8ca3f42f6f67016485df4e6d54ce8779d978bd707f628b",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0007?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0008",
+          "size": 134217728,
+          "sha256": "2f32dd545149b1e09808f0f8e1d22620b0b0413249c00494c838d7da6cc1263a",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0008?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0009",
+          "size": 134217728,
+          "sha256": "288cc9b2272617620cc367e306f7986b945593e4ece87638a7e0c40357bb9dd3",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0009?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0010",
+          "size": 134217728,
+          "sha256": "78249d29a6870e5ecf3667d03d986859791023852139a889616e4bb543a3bd7e",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0010?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0011",
+          "size": 134217728,
+          "sha256": "a64f96f5e21e924420f68e731e733a244b436062eda316de6c9f999d2ce4154c",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0011?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0012",
+          "size": 134217728,
+          "sha256": "63d20471a8ce9e761a444425c98bfc1824562e9d38c714d9d36f36ce331c69ca",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0012?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0013",
+          "size": 134217728,
+          "sha256": "2a7b35850524751ef3c348d113c5fe7c45fa14c79cc564bd663adcd8862bcafe",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0013?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0014",
+          "size": 134217728,
+          "sha256": "23f8ae87a3f0f3dc2bdbbb7bdabcbaee5f6b11f217065d141380fc04c541d06d",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0014?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0015",
+          "size": 134217728,
+          "sha256": "66bca1f14de32d6a56a8dfd7c176f1c81bd53dc1990fd67eefbbd387191eefe5",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0015?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0016",
+          "size": 134217728,
+          "sha256": "85a4bdf6dae0d5fea1458cc56fc4394ad3f58d689a0cbd832811a977ad48aeb3",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0016?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0017",
+          "size": 134217728,
+          "sha256": "63bcbb48895a6d8f7568c11846e786c34f3117a1e923e56b2587b1287c7727cc",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0017?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0018",
+          "size": 134217728,
+          "sha256": "5ffcbe80053cb8371377530f5b54d953a62143dbaf57036c10445a5190500e42",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0018?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0019",
+          "size": 134217728,
+          "sha256": "c6541b2b605bf3a91adfeff823ec720438384f65e4db32b22871f27ebca1b0d6",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0019?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0020",
+          "size": 134217728,
+          "sha256": "d64444587dce3cbf96ba155012ae0b46093dba5939ead9111086cbfd7d644ba1",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0020?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0021",
+          "size": 134217728,
+          "sha256": "6a3bda597a2b5f8d799eee914fae2391a684ee1184e4fe784e4dfc5fdee2a403",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0021?download=1"
+        },
+        {
+          "name": "global_normal.pt.part0022",
+          "size": 65624181,
+          "sha256": "a46d6976e3b050d46876cc4673685dc8a4534782e55dfebfc50ea7cc772fe29e",
+          "url": "https://zenodo.org/records/23181947/files/global_normal.pt.part0022?download=1"
+        }
+      ]
     },
     {
       "name": "region.pt",
       "size": 2884917365,
       "sha256": "2b7576772a8dbc06a7b8c25f068a87b9d7526098f9f1d2faa2a469e63da3c483",
-      "url": null
+      "url": null,
+      "parts": [
+        {
+          "name": "region.pt.part0001",
+          "size": 134217728,
+          "sha256": "3324e34c886bc76f9411c817b6069bdec07e0cde8e0f845c1cdff8e3ae22413c",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0001?download=1"
+        },
+        {
+          "name": "region.pt.part0002",
+          "size": 134217728,
+          "sha256": "10550c57b07ff4ceead56f513b080027691233a3d88f1ccc380521a38cc21c2f",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0002?download=1"
+        },
+        {
+          "name": "region.pt.part0003",
+          "size": 134217728,
+          "sha256": "8f453e9574f3dbd13dcfcbca6142ea2174b456c70432ace25555b7dc4b184bbe",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0003?download=1"
+        },
+        {
+          "name": "region.pt.part0004",
+          "size": 134217728,
+          "sha256": "db3b8c609860b25b23c81aca8dbe6e4f7274a9a362bf7dfa8ddd45a61d3c2ae5",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0004?download=1"
+        },
+        {
+          "name": "region.pt.part0005",
+          "size": 134217728,
+          "sha256": "65278957f07151760e24bb216e1c1e281751296b1cacdf6d69e74863cf1bed90",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0005?download=1"
+        },
+        {
+          "name": "region.pt.part0006",
+          "size": 134217728,
+          "sha256": "15e52a7a9a86db144f6690d3da99096a857b08c0e7ce2aa895fb5f8fa19fe0ad",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0006?download=1"
+        },
+        {
+          "name": "region.pt.part0007",
+          "size": 134217728,
+          "sha256": "f02c77966c1f99eb4e8e563004076187dbde08c751e750da52ac7d63b3ba18e8",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0007?download=1"
+        },
+        {
+          "name": "region.pt.part0008",
+          "size": 134217728,
+          "sha256": "edc8c36a9e93fcbefa70e3a2fcd06d9863dd02e3e7d26656d842eba25f862384",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0008?download=1"
+        },
+        {
+          "name": "region.pt.part0009",
+          "size": 134217728,
+          "sha256": "fa056642d17b9f8dadc5f7644f70788c30d4f82e1140b0eea9d7c55677130e04",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0009?download=1"
+        },
+        {
+          "name": "region.pt.part0010",
+          "size": 134217728,
+          "sha256": "cb2c41e57d73424037d06d55ebb71768a93a62f0f849d91ba97875a042f799d9",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0010?download=1"
+        },
+        {
+          "name": "region.pt.part0011",
+          "size": 134217728,
+          "sha256": "9e7684f3d2975ee60497fee4e71dec25ead5026004f37402567e10c557bf9be4",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0011?download=1"
+        },
+        {
+          "name": "region.pt.part0012",
+          "size": 134217728,
+          "sha256": "2857e6f283a7f414e496016cce9ce83191149ea8b3817135a13c417a867d5f17",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0012?download=1"
+        },
+        {
+          "name": "region.pt.part0013",
+          "size": 134217728,
+          "sha256": "c8cddabfff0881bdcd9c89ea1c06c189b2073970f72e3de89efd03873b035556",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0013?download=1"
+        },
+        {
+          "name": "region.pt.part0014",
+          "size": 134217728,
+          "sha256": "f107d297d6cb892aaf6355c959ea4a4f22291fc63d00a3010801a8dd36cf76d3",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0014?download=1"
+        },
+        {
+          "name": "region.pt.part0015",
+          "size": 134217728,
+          "sha256": "6d96154e11f88504487b7ff213a15dd7f46ccb292757adebb0b3d14cf3dcacfa",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0015?download=1"
+        },
+        {
+          "name": "region.pt.part0016",
+          "size": 134217728,
+          "sha256": "27a92fbd814314e88db05dc5a9b3f9f1e08517f539bd43e5fe36d92948fb84aa",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0016?download=1"
+        },
+        {
+          "name": "region.pt.part0017",
+          "size": 134217728,
+          "sha256": "1a18b4867664c0a6c3bd689e83753a149c1b45ca1da30ab8c9d7ecf28e747c48",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0017?download=1"
+        },
+        {
+          "name": "region.pt.part0018",
+          "size": 134217728,
+          "sha256": "6f607ce3143fc329f60e9753493ba69ef5b913f13dfdb2a3c3ec3d6d0d78888b",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0018?download=1"
+        },
+        {
+          "name": "region.pt.part0019",
+          "size": 134217728,
+          "sha256": "0a0c194a57fb479eef25dc1916f2781e789ccfc48a6839b77f5fc001f68c9827",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0019?download=1"
+        },
+        {
+          "name": "region.pt.part0020",
+          "size": 134217728,
+          "sha256": "7242d42644d5527cb53bef3611c2fe4a7f4218e28e4343d63137be3d1fd21297",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0020?download=1"
+        },
+        {
+          "name": "region.pt.part0021",
+          "size": 134217728,
+          "sha256": "a22837a829d95b820dd0de8c19f3baddbfe8023dc5fdea4f1a201a39222b5583",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0021?download=1"
+        },
+        {
+          "name": "region.pt.part0022",
+          "size": 66345077,
+          "sha256": "69b1086dfe4fb382f72e6fc8d02489ef326bdb9d3bcc995abe556bb4cdc4632a",
+          "url": "https://zenodo.org/records/23181947/files/region.pt.part0022?download=1"
+        }
+      ]
     }
   ],
-  "compatible_release": "v0.1.0-rc.1"
+  "compatible_release": "v0.1.0-rc.1",
+  "provider": "zenodo",
+  "record_id": 23181947,
+  "doi": "10.5281/zenodo.23181947",
+  "record_url": "https://zenodo.org/records/23181947"
 }
